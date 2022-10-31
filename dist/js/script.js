@@ -57,7 +57,8 @@ window.addEventListener('DOMContentLoaded', () => {
         fragment.innerHTML = (idx + '/' + tdx);
     });
 
-    const sumInput = document.querySelector('.promo__block-form-mininput');
+    const sumInputOne = document.querySelector('#input-one'),
+          sumInputTwo = document.querySelector('#input-two');
 
      
 
@@ -97,5 +98,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    range('.range__input--sum', '.range__track--sum', sumInput);
+    range('#range__input-one', '#range__track-one', sumInputOne);
+    range('#range__input-two', '#range__track-two', sumInputTwo);
 });
