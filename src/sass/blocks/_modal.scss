@@ -1,0 +1,285 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 199;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    transition: 0.3s;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    backdrop-filter: blur(4px);
+    transition: 0.3s;
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+    &-title {
+        font-family: 'Montserrat Bold', sans-serif;
+        font-size: 64px;
+        line-height: 78px;
+        color: #1E1E1E;
+    }
+    &-text {
+        font-family: 'Montserrat Bold', sans-serif;
+        width: 556px;
+        font-size: 25px;
+        line-height: 30px;
+        color: #1E1E1E;
+        &--color {
+            color: #0585E8;
+        }
+    }
+    &-thanks {
+        &__dialog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            max-width: 1076px;
+            width: 100%;
+            height: 475px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 4px rgba(30, 30, 30, 0.25);
+            border-radius: 20px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__title {
+            font-family: 'Montserrat Bold', sans-serif;
+            font-size: 55px;
+            line-height: 67px;
+            color: #0585E8;
+            margin-bottom: 40px;
+        }
+
+        &__descr {
+            max-width: 700px;
+            width: 100%;
+            font-size: 35px;
+            line-height: 38px;
+            color: #1E1E1E;
+        }
+        &__close {
+            position: absolute;
+            cursor: pointer;
+            top: 41px;
+            right: 47px;
+        }
+    }
+    &-reviews {
+        &__dialog {
+            position: relative;
+            padding: 106px 60px;
+            // display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            max-width: 1479px;
+            width: 100%;
+            height: 605px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 4px rgba(30, 30, 30, 0.25);
+            border-radius: 20px;
+            box-sizing: border-box;
+            align-items: center;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 534px;
+                height: 296px;
+                background: url('../img/modal/modal-bg-1.png') center no-repeat;
+            }
+        }
+        &__close {
+            position: absolute;
+            top: 47px;
+            right: 48px;
+            cursor: pointer;
+        }
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__descr {
+            width: 689px;
+            font-size: 25px;
+            line-height: 30px;
+            color: #1E1E1E;
+        }
+    }
+    &-requirements {
+        &__dialog {
+            position: relative;
+            padding: 106px 123px 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+            max-width: 1479px;
+            width: 100%;
+            height: 605px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 4px rgba(30, 30, 30, 0.25);
+            border-radius: 20px;
+            box-sizing: border-box;
+        
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 472px;
+                height: 319px;
+                background: url('../img/modal/modal-bg-2.png') center no-repeat;
+            }
+        }
+        &__close {
+            position: absolute;
+            top: 47px;
+            right: 48px;
+            cursor: pointer;
+        }
+
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__descr,
+        &__subdescr {
+            font-size: 25px;
+            line-height: 30px;
+            color: #1E1E1E;
+        }
+        &__descr {
+            margin-bottom: 25px;
+        }
+        &__subdescr {
+            &--bold {
+                font-family: 'Montserrat Bold', sans-serif;
+                display: block;
+            }
+        }
+    }
+    &-stocks {
+        &__dialog {
+            position: relative;
+            padding: 106px 60px 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+            max-width: 1479px;
+            width: 100%;
+            height: 605px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 4px rgba(30, 30, 30, 0.25);
+            border-radius: 20px;
+            box-sizing: border-box;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 483px;
+                height: 331px;
+                background: url('../img/modal/modal-bg-3.png') center no-repeat;
+            }
+        }
+        &__close {
+            position: absolute;
+            top: 47px;
+            right: 48px;
+            cursor: pointer;
+        }
+        &__title {
+            margin-bottom: 11px;
+        }
+        &__descr {
+            max-width: 689px;
+            width: 100%;
+            margin-bottom: 30px;
+            span {
+                display: block;
+                font-family: 'Montserrat Bold', sans-serif;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-connection {
+        &__dialog {
+            position: relative;
+            padding: 106px 170px 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+            max-width: 1479px;
+            width: 100%;
+            height: 605px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 4px rgba(30, 30, 30, 0.25);
+            border-radius: 20px;
+            box-sizing: border-box;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 507px;
+                height: 344px;
+                background: url('../img/modal/modal-bg-4.png') center no-repeat;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 47px;
+            right: 48px;
+            cursor: pointer;
+        }
+
+        &__title {
+            margin-bottom: 11px;
+        }
+
+        &__descr {
+            display: block;
+            max-width: 689px;
+            width: 100%;
+            margin-bottom: 30px;
+
+            span {
+                display: block;
+                font-family: 'Montserrat Bold', sans-serif;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
