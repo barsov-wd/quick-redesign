@@ -76,6 +76,7 @@
         width: 380px;
         height: 105px;
         background: #FFFFFF;
+        transition: all .5s;
         color: #1E1E1E;
         font-size: 18px;
         line-height: 22px;
@@ -83,7 +84,7 @@
         border-radius: 20px;
         border: none;
         outline: none;
-        &--active {
+        &:hover {
             background: #0585E8;
             color: #fff;
         }
